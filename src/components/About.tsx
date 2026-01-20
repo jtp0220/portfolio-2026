@@ -2,11 +2,12 @@ import "../styles/index.css";
 
 export default function About() {
     return (
-        <section id="about" className="bg-primary scroll-mt-15">
+        <section id="about" className="bg-bg-primary scroll-mt-15">
             <div className="m-auto flex max-w-250 flex-col items-center justify-center px-7 py-10">
-                <h1 className="mb-10 text-3xl font-bold underline underline-offset-4">ABOUT ME</h1>
-                <div>
-                    <p className="text-xl font-light">Thanks for stopping by. I'm a recent Computer Science graduate from Carleton University. I've always been curious about how things work - the inner mechanisms - and drawn to the process of creating. Over time, my interested have ranged from architecture to mechanical design, and ultimately to computer science, where I believe my strong fascination with technology and building things truly align.</p>
+                <h1 className="text-text-primary mb-10 text-3xl font-bold">About</h1>
+                <div className="space-y-5 text-xl font-light">
+                    <p className="text-text-primary text-xl">Hey!, Thanks for stopping by. I'm a recent Computer Science graduate, passionate about web development and building things that are both functional and fun.</p>
+                    <p className="text-text-primary/70 text-lg">I enjoy exploring new technologies, tinkering with projects, and learning through doing. Outside of coding, I like photography, gaming, and diving into Japanese language and culture. While most of my experience is in web development, I'm always curious to try new things and expand my skills. I always prefer trying new things than staying comfortable.</p>
                 </div>
             </div>
         </section>

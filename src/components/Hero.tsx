@@ -53,16 +53,16 @@ export default function Hero() {
     }, []);
 
     return (
-        <section id="hero" className="flex h-screen flex-col items-center justify-center">
-            <span className="text-accent text-3xl font-medium">Hello, I'm</span>
-            <span className="mt-1 mb-6 text-7xl font-bold">Jeremy</span>
-            <span id="text-cycle" className="text-accent text-3xl font-medium">
+        <section id="hero" className="bg-bg-secondary flex h-screen flex-col items-center justify-center">
+            <span className="text-text-secondary text-3xl font-medium">Hello, I'm</span>
+            <span className="text-text-primary mt-6 mb-6 text-center text-7xl font-bold">Jeremy Tran Perez</span>
+            <span id="text-cycle" className="text-text-secondary text-3xl font-medium">
                 <span id="text-cycle-text">{text}</span>
                 <span id="text-cycle-blinker" className="inline-block w-[1ch]">
                     {blinker ? "\u00A0|" : ""}
                 </span>
             </span>
-            <span className="bg-accent hover:text-accent hover:bg-primary my-10 rounded-3xl px-4 py-1 text-2xl font-medium transition-colors">
+            <span className="text-text-primary bg-bg-tertiary hover:bg-bg-primary border-text-secondary my-10 rounded-xl border px-8 py-4 text-xl font-medium transition-colors">
                 <a href="#about">Learn More</a>
             </span>
         </section>

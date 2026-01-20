@@ -14,7 +14,7 @@ body,
     /* Palette 1 */
     --color-primary: #061e29;
     --color-secondary: #1d546d;
-    --color-accent: #5f9598;
+    --color-bg-tertiary: --color-accent: #5f9598;
     --color-neutral: #f3f4f4;
 
     /* Palette 2 */
@@ -22,6 +22,13 @@ body,
     --color-secondary: #415a77;
     --color-accent: #778da9;
     --color-neutral: #e0e1dd;
+
+    /* Palette 3 */
+    --color-bg-primary: #05090f;
+    --color-bg-secondary: #1b263b;
+    --color-bg-tertiary: #415a77;
+    --color-text-primary: #e0e1dd;
+    --color-text-secondary: #778da9;
 
     --font-outfit: "Outfit", sans-serif;
 }

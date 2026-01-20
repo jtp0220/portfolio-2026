@@ -10,7 +10,7 @@ import Footer from "./components/Footer";
 
 export default function App() {
     return (
-        <div className="bg-secondary text-neutral font-outfit min-h-screen w-full font-normal">
+        <div className="font-outfit min-h-screen w-full font-normal">
             <Header />
             <Hero />
             <main>
