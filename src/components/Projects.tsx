@@ -3,11 +3,11 @@ import LinkIcon from "../assets/link-icon.svg?react";
 
 function Project({ title, description, url }: { title: string; description: string; url: string }) {
     return (
-        <div className="bg-bg-secondary hover:bg-bg-tertiary flex max-w-100 flex-row gap-5 rounded-2xl p-4">
-            <a href={url}>
+        <div className="bg-bg-secondary hover:bg-bg-tertiary flex max-w-100 flex-row rounded-2xl p-4">
+            <a href={url} className="flex flex-col gap-2">
                 <div className="flex items-center justify-between">
                     <h2 className="text-xl font-bold">{title}</h2>
-                    <LinkIcon className="text-text-primary h-6 w-6" />
+                    <LinkIcon className="text-text-primary h-6 w-auto" />
                 </div>
                 <p>{description}</p>
             </a>
