@@ -53,7 +53,7 @@ export default function Hero() {
     }, []);
 
     return (
-        <section id="hero" className="bg-bg-secondary flex h-screen flex-col items-center justify-center">
+        <section id="hero" className="bg-bg-secondary flex h-screen min-h-200 flex-col items-center justify-center">
             <span className="text-text-secondary text-3xl font-medium">Hello, I'm</span>
             <span className="text-text-primary mt-6 mb-6 text-center text-7xl font-bold">Jeremy Tran Perez</span>
             <span id="text-cycle" className="text-text-secondary text-3xl font-medium">

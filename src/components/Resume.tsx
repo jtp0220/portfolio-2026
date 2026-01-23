@@ -17,7 +17,7 @@ function SkillEntry({ title, children }: { title: string; children: ReactElement
     const styledChild = React.cloneElement(children as ReactElement<{ className?: string }>, { className: "h-5 w-5" });
 
     return (
-        <div className="flex items-center justify-center gap-2 rounded-xl border px-5 py-2">
+        <div className="bg-bg-secondary hover:bg-text-secondary flex items-center justify-center gap-2 rounded-xl border px-5 py-2 transition-colors duration-300">
             {styledChild}
             <p>{title}</p>
         </div>
@@ -30,7 +30,7 @@ export default function Resume() {
             <div className="m-auto max-w-250 items-center justify-center px-7 py-10">
                 <h1 className="text-text-primary mb-10 text-center text-3xl font-bold">Resume</h1>
                 <div className="flex flex-col gap-10">
-                    <div className="text-text-primary bg-bg-primary border-text-secondary rounded-2xl border p-10">
+                    <div className="text-text-primary bg-bg-primary border-text-secondary rounded-2xl p-10">
                         <h2 className="text-xl font-bold">EDUCATION</h2>
                         <h3 className="text-md font-bold">Bachelor of Computer Science, Software Engineering</h3>
                         <p className="text-sm font-light italic">Carleton University (2021 - 2025)</p>
@@ -41,7 +41,7 @@ export default function Resume() {
                         </ul>
                     </div>
 
-                    <div className="text-text-primary bg-bg-primary border-text-secondary rounded-2xl border p-10">
+                    <div className="text-text-primary bg-bg-primary border-text-secondary rounded-2xl p-10">
                         <h2 className="text-xl font-bold">SKILLS</h2>
                         <div className="flex flex-col">
                             <div>
