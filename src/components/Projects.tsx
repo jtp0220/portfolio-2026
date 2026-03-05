@@ -1,5 +1,5 @@
 import "../styles/index.css";
-import LinkIcon from "../assets/link-icon.svg?react";
+import LinkIcon from "../assets/icons/link-icon.svg?react";
 
 function Project({ title, description, url }: { title: string; description: string; url: string }) {
     return (

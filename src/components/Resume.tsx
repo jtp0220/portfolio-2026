@@ -1,15 +1,15 @@
 import "../styles/index.css";
 
-import JSIcon from "../assets/js-icon.svg?react";
-import TSIcon from "../assets/ts-icon.svg?react";
-import TailwindIcon from "../assets/tailwind-icon.svg?react";
-import JavaIcon from "../assets/java-icon.svg?react";
-import ReactJSIcon from "../assets/reactjs-icon.svg?react";
-import CIcon from "../assets/c-icon.svg?react";
-import CPPIcon from "../assets/cpp-icon.svg?react";
-import PythonIcon from "../assets/python-icon.svg?react";
-import HTMLIcon from "../assets/html-icon.svg?react";
-import CSSIcon from "../assets/css-icon.svg?react";
+import JSIcon from "../assets/icons/js-icon.svg?react";
+import TSIcon from "../assets/icons/ts-icon.svg?react";
+import TailwindIcon from "../assets/icons/tailwind-icon.svg?react";
+import JavaIcon from "../assets/icons/java-icon.svg?react";
+import ReactJSIcon from "../assets/icons/reactjs-icon.svg?react";
+import CIcon from "../assets/icons/c-icon.svg?react";
+import CPPIcon from "../assets/icons/cpp-icon.svg?react";
+import PythonIcon from "../assets/icons/python-icon.svg?react";
+import HTMLIcon from "../assets/icons/html-icon.svg?react";
+import CSSIcon from "../assets/icons/css-icon.svg?react";
 import type { ReactElement } from "react";
 import React from "react";
 
