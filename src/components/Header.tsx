@@ -1,13 +1,8 @@
 import "../styles/index.css";
 
-import LinkedinIcon from "../assets/icons/linkedin-icon.svg?react";
-import GithubIcon from "../assets/icons/github-icon.svg?react";
-import InstagramIcon from "../assets/icons/instagram-icon.svg?react";
+import { useState } from "react";
 
-import type { ReactElement } from "react";
-import React, { useState } from "react";
-
-import { HeaderData } from "../constants";
+import { HeaderData, type SocialTabData } from "../constants";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -44,12 +39,8 @@ function Navbar(params: headerState) {
           ))}
         </ul>
         <ul className="flex items-center justify-center space-x-1">
-          {HeaderData.socialTabs.map(({ icon: Icon, href }, index) => {
-            return (
-              <SocialTab key={index} href={href}>
-                <Icon />
-              </SocialTab>
-            );
+          {HeaderData.socialTabs.map((value: SocialTabData, index) => {
+            return <SocialTabData key={index} {...value} />;
           })}
         </ul>
       </div>
@@ -67,12 +58,12 @@ function NavTab({ label, href, setOpen }: { label: string; href: string; setOpen
   );
 }
 
-function SocialTab({ href, children }: { href: string; children: ReactElement }) {
-  const styledChild = React.cloneElement(children as ReactElement<{ className?: string }>, { className: "w-full h-full" });
-
+function SocialTabData(params: SocialTabData) {
   return (
     <li className="text-text-primary hover:bg-bg-tertiary flex h-9 w-9 items-center justify-center rounded-lg p-2 transition-colors">
-      <a href={href}>{styledChild}</a>
+      <a href={params.href}>
+        <params.icon className="h-full w-full" />
+      </a>
     </li>
   );
 }
