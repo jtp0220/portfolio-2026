@@ -17,7 +17,7 @@ function Skill(params: SkillData) {
 
 export default function Resume() {
   return (
-    <section id="resume" className="bg-bg-secondary scroll-mt-15">
+    <section id="resume" className="bg-bg-secondary md:scroll-mt-15">
       <div className="m-auto max-w-250 items-center justify-center px-7 py-10">
         <h1 className="text-text-primary mb-10 text-center text-3xl font-bold">Resume</h1>
         <div className="flex flex-col gap-10">
