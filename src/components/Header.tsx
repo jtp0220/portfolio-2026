@@ -3,6 +3,7 @@ import "../styles/index.css";
 import { useState } from "react";
 
 import { HeaderData, type SocialTabData } from "../constants";
+import ThemeSelector from "./ThemeSelector";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -43,6 +44,9 @@ function Navbar(params: headerState) {
             return <SocialTabData key={index} {...value} />;
           })}
         </ul>
+        <div className="top-3 right-3 md:fixed">
+          <ThemeSelector />
+        </div>
       </div>
     </nav>
   );
