@@ -43,7 +43,7 @@ export default function Resume() {
               </div>
               <div>
                 <h3 className="text-lg font-bold">Languages</h3>
-                <div className="flex flex-wrap gap-5 py-3">{<div className="flex flex-wrap gap-5 py-3">{resumeData.skills.map((value: SkillData, index) => (value.type == "language" ? <Skill key={index} {...value} /> : <></>))}</div>}</div>
+                <div className="flex flex-wrap gap-5 py-3">{resumeData.skills.map((value: SkillData, index) => (value.type == "language" ? <Skill key={index} {...value} /> : <></>))}</div>
               </div>
             </div>
           </div>
