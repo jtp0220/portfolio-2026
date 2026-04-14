@@ -1,14 +1,11 @@
 import "../styles/index.css";
 
-import type { ReactElement } from "react";
-import React from "react";
-
 import type { SkillData } from "../constants";
 import { resumeData } from "../constants";
 
 function Skill(params: SkillData) {
   return (
-    <div className="bg-bg-secondary hover:bg-text-secondary flex items-center justify-center gap-2 rounded-xl border px-5 py-2 transition-colors duration-300">
+    <div className="bg-bg-secondary hover:bg-text-secondary border-text-secondary flex items-center justify-center gap-2 rounded-xl border px-5 py-2 transition-colors duration-300">
       <params.icon className="h-5 w-5" />
       <p>{params.title}</p>
     </div>

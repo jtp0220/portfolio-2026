@@ -7,7 +7,7 @@ function Project({ title, description, url }: { title: string; description: stri
       <a href={url} className="flex flex-col gap-2">
         <div className="flex items-center justify-between">
           <h2 className="text-xl font-bold">{title}</h2>
-          <LinkIcon className="text-text-primary h-6 w-auto" />
+          <LinkIcon className="text-text-primary h-6 w-auto self-start" />
         </div>
         <p>{description}</p>
       </a>

@@ -33,7 +33,7 @@ function Sandwich(params: headerState) {
 function Navbar(params: headerState) {
   return (
     <nav>
-      <div className={`${params.open ? "" : "translate-x-full"} bg-bg-primary fixed top-0 right-0 mx-auto flex h-full w-full max-w-80 flex-col items-center space-y-5 pt-15 shadow-lg shadow-gray-900 transition-transform duration-300 ease-in-out md:flex md:h-15 md:max-w-full md:translate-x-0 md:flex-row md:justify-center md:space-y-0 md:space-x-3 md:pt-0 md:transition-none`}>
+      <div className={`${params.open ? "" : "translate-x-full"} bg-bg-primary shadow-shadow fixed top-0 right-0 mx-auto flex h-full w-full max-w-80 flex-col items-center space-y-5 pt-15 shadow-lg transition-transform duration-300 ease-in-out md:flex md:h-15 md:max-w-full md:translate-x-0 md:flex-row md:justify-center md:space-y-0 md:space-x-3 md:pt-0 md:transition-none`}>
         <ul className="flex w-full flex-col items-center justify-center md:w-auto md:flex-row md:space-x-1">
           {HeaderData.navTabs.map((item, index) => (
             <NavTab key={index} {...item} setOpen={params.setOpen} />
