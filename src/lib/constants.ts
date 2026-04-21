@@ -1,18 +1,18 @@
-import LinkedinIcon from "./assets/icons/linkedin-icon.svg?react";
-import GithubIcon from "./assets/icons/github-icon.svg?react";
-import InstagramIcon from "./assets/icons/instagram-icon.svg?react";
+import LinkedinIcon from "/src/assets/icons/linkedin-icon.svg?react";
+import GithubIcon from "/src/assets/icons/github-icon.svg?react";
+import InstagramIcon from "/src/assets/icons/instagram-icon.svg?react";
 
-import JSIcon from "./assets/icons/js-icon.svg?react";
-import TSIcon from "./assets/icons/ts-icon.svg?react";
-import TailwindIcon from "./assets/icons/tailwind-icon.svg?react";
-import JavaIcon from "./assets/icons/java-icon.svg?react";
-import ReactJSIcon from "./assets/icons/reactjs-icon.svg?react";
-import CIcon from "./assets/icons/c-icon.svg?react";
-import CPPIcon from "./assets/icons/cpp-icon.svg?react";
-import PythonIcon from "./assets/icons/python-icon.svg?react";
-import HTMLIcon from "./assets/icons/html-icon.svg?react";
-import CSSIcon from "./assets/icons/css-icon.svg?react";
-import NextJSIcon from "./assets/icons/nextjs-icon.svg?react";
+import JSIcon from "/src/assets/icons/js-icon.svg?react";
+import TSIcon from "/src/assets/icons/ts-icon.svg?react";
+import TailwindIcon from "/src/assets/icons/tailwind-icon.svg?react";
+import JavaIcon from "/src/assets/icons/java-icon.svg?react";
+import ReactJSIcon from "/src/assets/icons/reactjs-icon.svg?react";
+import CIcon from "/src/assets/icons/c-icon.svg?react";
+import CPPIcon from "/src/assets/icons/cpp-icon.svg?react";
+import PythonIcon from "/src/assets/icons/python-icon.svg?react";
+import HTMLIcon from "/src/assets/icons/html-icon.svg?react";
+import CSSIcon from "/src/assets/icons/css-icon.svg?react";
+import NextJSIcon from "/src/assets/icons/nextjs-icon.svg?react";
 
 type NavTabData = {
   label: string;
@@ -54,6 +54,10 @@ export const HeaderData: HeaderData = {
     {
       label: "Contact",
       href: "#contact",
+    },
+    {
+      label: "Blog",
+      href: "/blog",
     },
   ],
 

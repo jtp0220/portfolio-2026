@@ -1,8 +1,11 @@
-import "../styles/index.css";
+import "/src/styles/index.css";
 
 import { useState } from "react";
 
-import { HeaderData, type SocialTabData } from "../constants";
+import { HeaderData, type SocialTabData } from "../../lib/constants";
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
+
 import ThemeSelector from "./ThemeSelector";
 
 export default function Header() {
@@ -53,8 +56,32 @@ function Navbar(params: headerState) {
 }
 
 function NavTab({ label, href, setOpen }: { label: string; href: string; setOpen: () => void }) {
+  const isRoute = href.startsWith("/");
+  const isHash = href.includes("#");
+
+  const style = "text-text-primary hover:bg-bg-tertiary w-full px-3 py-4 text-center transition-colors md:w-auto md:rounded-lg md:py-1";
+  if (isRoute) {
+    return (
+      <li className={style}>
+        <Link to={href} onClick={setOpen}>
+          {label}
+        </Link>
+      </li>
+    );
+  }
+
+  if (isHash) {
+    return (
+      <li className={style}>
+        <HashLink smooth to={`/${href}`}>
+          {label}
+        </HashLink>
+      </li>
+    );
+  }
+
   return (
-    <li className="text-text-primary hover:bg-bg-tertiary w-full px-3 py-4 text-center transition-colors md:w-auto md:rounded-lg md:py-1">
+    <li className={style}>
       <a href={href} onClick={setOpen}>
         {label}
       </a>

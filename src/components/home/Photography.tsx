@@ -1,5 +1,5 @@
-import "../styles/index.css";
-const images = Object.values(import.meta.glob("../assets/gallery/*.{jpg,JPG}", { eager: true })).map((mod: any) => mod.default);
+import "/src/styles/index.css";
+const images = Object.values(import.meta.glob("/src/assets/gallery/*.{jpg,JPG}", { eager: true })).map((mod: any) => mod.default);
 
 function PhotoFrame({ src }: { src: string }) {
   return (

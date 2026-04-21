@@ -1,4 +1,4 @@
-import "../styles/index.css";
+import "/src/styles/index.css";
 
 export default function About() {
   return (

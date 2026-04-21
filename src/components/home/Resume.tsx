@@ -1,7 +1,6 @@
-import "../styles/index.css";
-
-import type { SkillData } from "../constants";
-import { resumeData } from "../constants";
+import "/src/styles/index.css";
+import type { SkillData } from "../../lib/constants";
+import { resumeData } from "../../lib/constants";
 
 function Skill(params: SkillData) {
   return (

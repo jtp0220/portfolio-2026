@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import ColorPaletteIcon from "../assets/icons/color-palette-icon.svg?react";
+import ColorPaletteIcon from "/src/assets/icons/color-palette-icon.svg?react";
 
 type Theme = "default" | "red" | "green" | "purple" | "charcoal" | "vanilla";
 

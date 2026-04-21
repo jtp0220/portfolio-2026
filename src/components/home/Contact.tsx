@@ -1,6 +1,6 @@
-import "../styles/index.css";
+import "/src/styles/index.css";
 
-import EmailIcon from "../assets/icons/email-icon.svg?react";
+import EmailIcon from "/src/assets/icons/email-icon.svg?react";
 
 export default function Contact() {
   return (
