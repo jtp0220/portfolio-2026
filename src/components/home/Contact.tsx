@@ -1,11 +1,10 @@
-import "../styles/index.css";
-
-import EmailIcon from "../assets/icons/email-icon.svg?react";
+import EmailIcon from "@/assets/icons/email-icon.svg?react";
+import Section from "@/components/core/Section";
 
 export default function Contact() {
   return (
-    <section id="contact" className="bg-bg-primary text-text-primary md:scroll-mt-15">
-      <div className="m-auto flex max-w-250 flex-col items-center justify-center px-7 py-10">
+    <Section id="contact" className="bg-bg-primary text-text-primary md:scroll-mt-15">
+      <div className="m-auto flex max-w-250 flex-col items-center justify-center">
         <h1 className="text-text-primary mb-10 text-3xl font-bold">Contact</h1>
         <div className="">
           <p className="pb-10 text-center text-lg">If you'd like to get in touch, feel free to email me at: </p>
@@ -17,6 +16,6 @@ export default function Contact() {
           </div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 }

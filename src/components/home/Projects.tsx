@@ -1,5 +1,5 @@
-import "../styles/index.css";
-import LinkIcon from "../assets/icons/link-icon.svg?react";
+import LinkIcon from "@/assets/icons/link-icon.svg?react";
+import Section from "@/components/core/Section";
 
 function Project({ title, description, url }: { title: string; description: string; url: string }) {
   return (
@@ -18,8 +18,8 @@ function Project({ title, description, url }: { title: string; description: stri
 
 export default function Projects() {
   return (
-    <section id="projects" className="text-text-primary bg-bg-primary md:scroll-mt-15">
-      <div className="m-auto flex max-w-250 flex-col items-center justify-center px-7 py-10">
+    <Section id="projects" className="text-text-primary bg-bg-primary md:scroll-mt-15">
+      <div className="m-auto flex max-w-250 flex-col items-center justify-center">
         <h1 className="text-text-primary mb-10 text-3xl font-bold">Projects</h1>
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
           <Project title="Portfolio (Repo)" description="A responsive portfolio built with React, showcasing projects, skills, and photography." url="https://github.com/jtp0220/portfolio-2026" />
@@ -28,6 +28,6 @@ export default function Projects() {
           <Project title="Kevin Tran Portfolio (Live)" description="Online portfolio of Kevin Tran, a piano performance student from Western University, showcasing classical and jazz performances alongside teaching services." url="https://kevintranpiano.ca" />
         </div>
       </div>
-    </section>
+    </Section>
   );
 }

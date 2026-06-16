@@ -1,26 +1,27 @@
-import "./styles/index.css";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Projects from "./components/Projects";
-import Resume from "./components/Resume";
-import Photography from "./components/Photography";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import "@/styles/index.css";
+import Header from "@/components/core/Header";
+import Footer from "@/components/core/Footer";
+
+import Hero from "@/components/home/Hero";
+import About from "@/components/home/About";
+import Projects from "@/components/home/Projects";
+import Resume from "@/components/home/Resume";
+import Photography from "@/components/home/Photography";
+import Contact from "@/components/home/Contact";
 
 export default function App() {
-    return (
-        <div className="font-outfit min-h-screen w-full font-normal">
-            <Header />
-            <Hero />
-            <main>
-                <About />
-                <Resume />
-                <Projects />
-                <Photography />
-                <Contact />
-            </main>
-            <Footer />
-        </div>
-    );
+  return (
+    <div className="font-outfit min-h-screen w-full font-normal">
+      <Header />
+      <Hero />
+      <main>
+        <About />
+        <Resume />
+        <Projects />
+        <Photography />
+        <Contact />
+      </main>
+      <Footer />
+    </div>
+  );
 }

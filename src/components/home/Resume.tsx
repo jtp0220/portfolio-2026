@@ -1,7 +1,5 @@
-import "../styles/index.css";
-
-import type { SkillData } from "../constants";
-import { resumeData } from "../constants";
+import { type SkillData, resumeData } from "@/lib/data/constants";
+import Section from "@/components/core/Section";
 
 function Skill(params: SkillData) {
   return (
@@ -14,8 +12,8 @@ function Skill(params: SkillData) {
 
 export default function Resume() {
   return (
-    <section id="resume" className="bg-bg-secondary md:scroll-mt-15">
-      <div className="m-auto max-w-250 items-center justify-center px-7 py-10">
+    <Section id="resume" className="bg-bg-secondary md:scroll-mt-15">
+      <div className="m-auto max-w-250 items-center justify-center">
         <h1 className="text-text-primary mb-10 text-center text-3xl font-bold">Resume</h1>
         <div className="flex flex-col gap-10">
           <div className="text-text-primary bg-bg-primary border-text-secondary rounded-2xl p-10">
@@ -46,6 +44,6 @@ export default function Resume() {
           </div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 }
