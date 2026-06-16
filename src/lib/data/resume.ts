@@ -1,6 +1,4 @@
-import LinkedinIcon from "@/assets/icons/linkedin-icon.svg?react";
-import GithubIcon from "@/assets/icons/github-icon.svg?react";
-import InstagramIcon from "@/assets/icons/instagram-icon.svg?react";
+import { type ResumeData } from "@/lib/types/resume";
 
 import JSIcon from "@/assets/icons/js-icon.svg?react";
 import TSIcon from "@/assets/icons/ts-icon.svg?react";
@@ -13,81 +11,6 @@ import PythonIcon from "@/assets/icons/python-icon.svg?react";
 import HTMLIcon from "@/assets/icons/html-icon.svg?react";
 import CSSIcon from "@/assets/icons/css-icon.svg?react";
 import NextJSIcon from "@/assets/icons/nextjs-icon.svg?react";
-
-type NavTabData = {
-  label: string;
-  href: string;
-};
-
-export type SocialTabData = {
-  icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
-  href: string;
-};
-
-type HeaderData = {
-  navTabs: NavTabData[];
-  socialTabs: SocialTabData[];
-};
-
-export const HeaderData: HeaderData = {
-  navTabs: [
-    {
-      label: "Home",
-      href: "#hero",
-    },
-    {
-      label: "About",
-      href: "#about",
-    },
-    {
-      label: "Resume",
-      href: "#resume",
-    },
-    {
-      label: "Projects",
-      href: "#projects",
-    },
-    {
-      label: "Photography",
-      href: "#photography",
-    },
-    {
-      label: "Contact",
-      href: "#contact",
-    },
-  ],
-
-  socialTabs: [
-    {
-      icon: LinkedinIcon,
-      href: "https://linkedin.com/in/jeremytranperez",
-    },
-    {
-      icon: GithubIcon,
-      href: "https://github.com/jtp0220",
-    },
-    {
-      icon: InstagramIcon,
-      href: "https://instagram.com/jeremytranperez",
-    },
-  ],
-};
-
-// ------------------------------------------------------------------------------ //
-
-export type SkillData = {
-  title: string;
-  type: string;
-  icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
-};
-
-export type ResumeData = {
-  program: string;
-  school: string;
-  period: string;
-  other: string[];
-  skills: SkillData[];
-};
 
 export const resumeData: ResumeData = {
   program: "Bachelor of Computer Science, Software Engineering",

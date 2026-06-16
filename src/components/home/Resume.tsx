@@ -1,4 +1,5 @@
-import { type SkillData, resumeData } from "@/lib/data/constants";
+import { resumeData } from "@/lib/data/resume";
+import { type SkillData } from "@/lib/types/resume";
 import Section from "@/components/core/Section";
 
 function Skill(params: SkillData) {

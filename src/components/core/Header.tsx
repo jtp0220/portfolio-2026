@@ -1,6 +1,7 @@
 import { useState } from "react";
 
-import { HeaderData, type SocialTabData } from "@/lib/data/constants";
+import { HeaderData } from "@/lib/data/navbar";
+import { type SocialTabData } from "@/lib/types/navbar";
 import ThemeSelector from "./ThemeSelector";
 
 export default function Header() {
