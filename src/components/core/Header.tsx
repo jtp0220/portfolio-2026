@@ -65,7 +65,7 @@ function SocialTabData(params: SocialTabData) {
   return (
     <li className="text-text-primary hover:bg-bg-tertiary flex h-9 w-9 items-center justify-center rounded-lg p-2 transition-colors">
       <a href={params.href}>
-        <params.icon className="h-full w-full" />
+        <params.icon size={23} />
       </a>
     </li>
   );

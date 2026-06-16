@@ -1,8 +1,8 @@
 import { type HeaderData as HeaderDataType } from "@/lib/types/navbar";
 
-import LinkedinIcon from "@/assets/icons/linkedin-icon.svg?react";
-import GithubIcon from "@/assets/icons/github-icon.svg?react";
-import InstagramIcon from "@/assets/icons/instagram-icon.svg?react";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 
 export const HeaderData: HeaderDataType = {
   navTabs: [
@@ -34,15 +34,15 @@ export const HeaderData: HeaderDataType = {
 
   socialTabs: [
     {
-      icon: LinkedinIcon,
+      icon: FaLinkedinIn,
       href: "https://linkedin.com/in/jeremytranperez",
     },
     {
-      icon: GithubIcon,
+      icon: FaGithub,
       href: "https://github.com/jtp0220",
     },
     {
-      icon: InstagramIcon,
+      icon: FaInstagram,
       href: "https://instagram.com/jeremytranperez",
     },
   ],

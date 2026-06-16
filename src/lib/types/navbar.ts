@@ -1,10 +1,12 @@
+import { type IconType } from "react-icons";
+
 export type NavTabData = {
   label: string;
   href: string;
 };
 
 export type SocialTabData = {
-  icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
+  icon: IconType;
   href: string;
 };
 

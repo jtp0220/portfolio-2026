@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import ColorPaletteIcon from "@/assets/icons/color-palette-icon.svg?react";
+import { IoIosColorPalette } from "react-icons/io";
 
 type Theme = "default" | "red" | "green" | "purple" | "charcoal" | "vanilla";
 
@@ -31,7 +31,7 @@ export default function ThemeSelector() {
           setTheme(themeOptions[idx]);
         }}
       >
-        <ColorPaletteIcon className="h-full w-full" />
+        <IoIosColorPalette size={30} />
       </button>
     </div>
   );
