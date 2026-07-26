@@ -22,6 +22,7 @@ export default function Projects() {
       <div className="m-auto flex max-w-250 flex-col items-center justify-center">
         <h1 className="text-text-primary mb-10 text-3xl font-bold">Projects</h1>
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
+          <Project title="HL Lanovation Website (Live)" description="Freelance client website built with Next.js and TypeScript for a landscaping and renovation company." url="https://www.hllanovation.com" />
           <Project title="Portfolio (Repo)" description="A responsive portfolio built with React, showcasing projects, skills, and photography." url="https://github.com/jtp0220/portfolio-2026" />
           <Project title="Fusician (Repo)" description="A full-stack website for discovering and listing musician servies." url="https://github.com/jtp0220/fusician" />
           <Project title="Kantan (Live)" description="A lightweight webapp built for Japanese learners. Paste any Japanese text into the box and the app will auto-extract any Chinese characters." url="https://kantan.ca" />
