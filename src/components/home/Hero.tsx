@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from "react";
+import { FaArrowDownLong } from "react-icons/fa6";
+
 import { navigateToSection } from "@/lib/navigation";
 
 const textCycleList = ["Developer", "Photographer", "Gamer", "CS Graduate"];
@@ -68,8 +70,9 @@ export default function Hero() {
               {blinker ? "\u00A0|" : ""}
             </span>
           </span>
-          <a href="#about" onClick={(event) => navigateToSection(event, "#about")} className="bg-accent text-bg-primary hover:bg-accent-soft mt-10 inline-flex items-center rounded-lg px-6 py-3 text-sm font-semibold transition-colors">
-            Learn more<span className="ml-8 text-lg">↘</span>
+          <a href="#about" onClick={(event) => navigateToSection(event, "#about")} className="bg-accent text-bg-primary hover:bg-accent-soft mt-10 inline-flex items-center gap-3 rounded-lg px-6 py-3 text-sm font-semibold transition-colors">
+            <span>Learn more</span>
+            <FaArrowDownLong aria-hidden="true" className="text-base" />
           </a>
         </div>
       </div>
