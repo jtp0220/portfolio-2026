@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-bg-primary border-text-primary/20 flex items-center justify-center border-t py-10">
+    <footer className="bg-bg-primary border-line flex items-center justify-center border-t px-6 py-8 text-sm md:px-10">
       <p className="text-text-primary">© 2026 Jeremy Tran Perez. All rights reserved.</p>
     </footer>
   );

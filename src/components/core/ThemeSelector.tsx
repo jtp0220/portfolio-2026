@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
 import { IoIosColorPalette } from "react-icons/io";
 
-type Theme = "default" | "red" | "green" | "purple" | "charcoal" | "vanilla";
+type Theme = "default" | "blue" | "charcoal" | "vanilla";
+
+const themeOptions: Theme[] = ["default", "blue", "vanilla", "charcoal"];
 
 export default function ThemeSelector() {
   const [theme, setTheme] = useState<Theme>(() => {
-    return (localStorage.getItem("theme") as Theme) || "default";
+    const storedTheme = localStorage.getItem("theme") as Theme;
+    return themeOptions.includes(storedTheme) ? storedTheme : "default";
   });
-
-  const themeOptions: Theme[] = ["default", "red", "green", "purple", "charcoal", "vanilla"];
 
   useEffect(() => {
     const root = document.documentElement;
@@ -22,8 +23,9 @@ export default function ThemeSelector() {
   }, [theme]);
 
   return (
-    <div className="text-text-primary hover:bg-bg-tertiary flex h-9 w-9 items-center justify-center rounded-lg p-1">
+    <div className="text-text-secondary hover:text-accent flex h-9 w-9 items-center justify-center p-1">
       <button
+        aria-label={`Change theme (current: ${theme})`}
         className="cursor-pointer"
         onClick={() => {
           let idx = themeOptions.indexOf(theme);

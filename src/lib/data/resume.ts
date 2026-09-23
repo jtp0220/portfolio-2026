@@ -1,16 +1,8 @@
 import { type ResumeData } from "@/lib/types/resume";
 
-import JSIcon from "@/assets/icons/js-icon.svg?react";
-import TSIcon from "@/assets/icons/ts-icon.svg?react";
-import TailwindIcon from "@/assets/icons/tailwind-icon.svg?react";
-import JavaIcon from "@/assets/icons/java-icon.svg?react";
-import ReactJSIcon from "@/assets/icons/reactjs-icon.svg?react";
-import CIcon from "@/assets/icons/c-icon.svg?react";
-import CPPIcon from "@/assets/icons/cpp-icon.svg?react";
-import PythonIcon from "@/assets/icons/python-icon.svg?react";
-import HTMLIcon from "@/assets/icons/html-icon.svg?react";
-import CSSIcon from "@/assets/icons/css-icon.svg?react";
-import NextJSIcon from "@/assets/icons/nextjs-icon.svg?react";
+import { FaJava } from "react-icons/fa6";
+import { FaHtml5, FaCss3Alt } from "react-icons/fa";
+import { SiC, SiCplusplus, SiCloudflare, SiJavascript, SiNextdotjs, SiPayloadcms, SiPython, SiReact, SiResend, SiTailwindcss, SiTypescript } from "react-icons/si";
 
 export const resumeData: ResumeData = {
   program: "Bachelor of Computer Science, Software Engineering",
@@ -20,58 +12,86 @@ export const resumeData: ResumeData = {
   skills: [
     {
       title: "ReactJS",
-      icon: ReactJSIcon,
+      icon: SiReact,
       type: "framework/library",
+      color: "#61dafb",
     },
     {
       title: "Tailwind",
-      icon: TailwindIcon,
+      icon: SiTailwindcss,
       type: "framework/library",
+      color: "#06b6d4",
     },
     {
       title: "NextJS",
-      icon: NextJSIcon,
+      icon: SiNextdotjs,
+      type: "framework/library",
+      color: "#ffffff",
+    },
+    {
+      title: "Payload",
+      icon: SiPayloadcms,
       type: "framework/library",
     },
     {
+      title: "Cloudflare",
+      icon: SiCloudflare,
+      type: "framework/library",
+      color: "#f38020",
+    },
+    {
+      title: "Resend",
+      icon: SiResend,
+      type: "framework/library",
+      color: "#f6f6f6",
+    },
+    {
       title: "JavaScript",
-      icon: JSIcon,
+      icon: SiJavascript,
       type: "language",
+      color: "#f7df1e",
     },
     {
       title: "TypeScript",
-      icon: TSIcon,
+      icon: SiTypescript,
       type: "language",
+      color: "#3178c6",
     },
     {
       title: "Java",
-      icon: JavaIcon,
+      icon: FaJava,
       type: "language",
+      color: "#ed8b00",
     },
     {
       title: "C",
-      icon: CIcon,
+      icon: SiC,
       type: "language",
+      color: "#a8b9cc",
     },
     {
       title: "C++",
-      icon: CPPIcon,
+      icon: SiCplusplus,
       type: "language",
+      color: "#00599c",
     },
     {
       title: "Python",
-      icon: PythonIcon,
+      icon: SiPython,
       type: "language",
+      color: "#3776ab",
     },
     {
       title: "HTML",
-      icon: HTMLIcon,
+      icon: FaHtml5,
       type: "language",
+      color: "#e34f26",
     },
     {
       title: "CSS",
-      icon: CSSIcon,
+      icon: FaCss3Alt,
       type: "language",
+      color: "#1572b6",
     },
   ],
 };

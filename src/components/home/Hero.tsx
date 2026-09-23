@@ -1,7 +1,9 @@
 import { useEffect, useRef, useState } from "react";
+import { navigateToSection } from "@/lib/navigation";
+
+const textCycleList = ["Developer", "Photographer", "Gamer", "CS Graduate"];
 
 export default function Hero() {
-  const textCycleList = ["Developer", "Photographer", "Gamer", "CS Graduate"];
   const [text, setText] = useState("");
   const [blinker, setBlinker] = useState(true);
   const textIndexRef = useRef(0);
@@ -51,18 +53,26 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="hero" className="bg-bg-secondary flex h-screen min-h-200 flex-col items-center justify-center">
-      <span className="text-text-secondary text-3xl font-medium">Hello, I'm</span>
-      <span className="text-text-primary mt-6 mb-6 text-center text-7xl font-bold">Jeremy Tran Perez</span>
-      <span id="text-cycle" className="text-text-secondary text-3xl font-medium">
-        <span id="text-cycle-text">{text}</span>
-        <span id="text-cycle-blinker" className="inline-block w-[1ch]">
-          {blinker ? "\u00A0|" : ""}
-        </span>
-      </span>
-      <span className="text-text-primary bg-bg-tertiary hover:bg-bg-primary border-text-secondary my-10 rounded-xl border px-8 py-4 text-xl font-medium transition-colors">
-        <a href="#about">Learn More</a>
-      </span>
+    <section id="hero" className="hero-surface relative flex min-h-screen items-center overflow-hidden px-6 pt-32 pb-20 md:px-10">
+      <div className="relative mx-auto w-full max-w-6xl text-center md:text-left">
+        <div className="reveal">
+          <p className="text-text-secondary text-xl font-medium md:text-2xl">Hello, I'm</p>
+          <h1 className="text-text-primary mx-auto mt-4 max-w-4xl text-[clamp(4rem,11vw,9rem)] leading-[0.82] font-semibold tracking-[-0.09em] md:mx-0">
+            Jeremy
+            <br />
+            <span className="text-accent">Tran Perez</span>
+          </h1>
+          <span id="text-cycle" className="text-text-secondary mt-10 block font-mono text-lg md:text-xl">
+            <span id="text-cycle-text">{text}</span>
+            <span id="text-cycle-blinker" className="inline-block w-[1ch]">
+              {blinker ? "\u00A0|" : ""}
+            </span>
+          </span>
+          <a href="#about" onClick={(event) => navigateToSection(event, "#about")} className="bg-accent text-bg-primary hover:bg-accent-soft mt-10 inline-flex items-center rounded-lg px-6 py-3 text-sm font-semibold transition-colors">
+            Learn more<span className="ml-8 text-lg">↘</span>
+          </a>
+        </div>
+      </div>
     </section>
   );
 }
