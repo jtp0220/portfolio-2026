@@ -18,7 +18,13 @@ function Project({ title, description, url, category, image, tone, reverse = fal
     <article className="group border-line border-b py-12 first:border-t md:py-20">
       <a href={url} target="_blank" rel="noreferrer" className={`grid gap-8 md:grid-cols-[1.15fr_0.85fr] md:items-center md:gap-14 ${reverse ? "md:[&>div:first-child]:order-2" : ""}`}>
         <div className={`project-visual ${tone} relative aspect-[16/10] overflow-hidden rounded-2xl ${image ? "p-3 md:p-5" : "p-8 md:p-12"}`}>
-          {image ? <img className="h-full w-full rounded-xl object-cover object-top transition duration-300 group-hover:scale-[1.03]" src={image} alt={`${title} project preview`} /> : <RepoThumbnail title={title} category={category} />}
+          {image ? (
+            <div className="absolute inset-3 md:inset-5">
+              <img className="block h-full w-full rounded-xl object-cover object-center transition duration-300 group-hover:scale-[1.03]" src={image} alt={`${title} project preview`} />
+            </div>
+          ) : (
+            <RepoThumbnail title={title} category={category} />
+          )}
           <span className="bg-bg-primary text-text-primary absolute top-5 left-5 px-3 py-1 text-xs font-medium md:top-8 md:left-8">{category}</span>
         </div>
         <div className="relative">
