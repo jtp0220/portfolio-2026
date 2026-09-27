@@ -23,7 +23,9 @@ function Project({ title, description, url, category, image, tone, reverse = fal
               <img className="block h-full w-full rounded-xl object-cover object-center transition duration-300 group-hover:scale-[1.03]" src={image} alt={`${title} project preview`} />
             </div>
           ) : (
-            <RepoThumbnail title={title} category={category} />
+            <div className="absolute inset-8 md:inset-12">
+              <RepoThumbnail title={title} category={category} />
+            </div>
           )}
 
           <span className="bg-bg-primary text-text-primary absolute top-5 left-5 px-3 py-1 text-xs font-medium md:top-8 md:left-8">{category}</span>
