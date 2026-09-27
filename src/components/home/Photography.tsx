@@ -59,17 +59,21 @@ export default function Photography() {
           <button type="button" onClick={() => setSelectedIndex(null)} className="bg-bg-secondary text-text-primary hover:bg-accent absolute top-5 right-5 z-10 flex h-11 w-11 items-center justify-center rounded-full transition-colors" aria-label="Close photograph">
             <FaXmark />
           </button>
-          <div className="relative flex max-h-full max-w-full flex-col items-center gap-6 px-14 pt-8 pb-4 md:px-24 md:pt-10 md:pb-5">
-            <button type="button" onClick={() => setSelectedIndex((selectedIndex - 1 + images.length) % images.length)} className="bg-bg-secondary text-text-primary hover:bg-accent absolute top-1/2 left-0 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full transition-colors" aria-label="Previous photograph">
+
+          <div className="flex h-full w-full max-w-7xl items-center gap-4 md:gap-6">
+            <button type="button" onClick={() => setSelectedIndex((selectedIndex - 1 + images.length) % images.length)} className="bg-bg-secondary text-text-primary hover:bg-accent flex h-12 w-12 shrink-0 items-center justify-center rounded-full transition-colors" aria-label="Previous photograph">
               <FaChevronLeft />
             </button>
-            <img className="max-h-[calc(100vh-11rem)] max-w-[calc(100vw-10rem)] rounded-lg object-contain" src={images[selectedIndex]} alt={`Expanded photograph ${selectedIndex + 1}`} />
-            <button type="button" onClick={() => setSelectedIndex((selectedIndex + 1) % images.length)} className="bg-bg-secondary text-text-primary hover:bg-accent absolute top-1/2 right-0 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full transition-colors" aria-label="Next photograph">
+
+            <div className="flex h-full min-h-0 min-w-0 flex-1 items-center justify-center">
+              <a href={images[selectedIndex]} target="_blank" rel="noopener noreferrer" className="flex h-full min-h-0 min-w-0 items-center justify-center">
+                <img className="max-h-full max-w-full rounded-lg object-contain" src={images[selectedIndex]} alt={`Expanded photograph ${selectedIndex + 1}`} />
+              </a>
+            </div>
+
+            <button type="button" onClick={() => setSelectedIndex((selectedIndex + 1) % images.length)} className="bg-bg-secondary text-text-primary hover:bg-accent flex h-12 w-12 shrink-0 items-center justify-center rounded-full transition-colors" aria-label="Next photograph">
               <FaChevronRight />
             </button>
-            <a href={images[selectedIndex]} download className="bg-bg-secondary text-text-primary hover:bg-accent rounded-lg px-4 py-2 text-sm transition-colors">
-              Download image
-            </a>
           </div>
         </div>
       )}

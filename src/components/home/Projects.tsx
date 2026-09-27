@@ -16,8 +16,8 @@ function RepoThumbnail({ title, category }: { title: string; category: string })
 function Project({ title, description, url, category, image, tone, reverse = false, featured = false }: ProjectData) {
   return (
     <article className="group border-line border-b py-12 first:border-t md:py-20">
-      <a href={url} target="_blank" rel="noreferrer" className={`grid gap-8 md:grid-cols-[1.15fr_0.85fr] md:items-center md:gap-14 ${reverse ? "md:[&>div:first-child]:order-2" : ""}`}>
-        <div className={`project-visual ${tone} relative aspect-[16/10] overflow-hidden rounded-2xl ${image ? "p-3 md:p-5" : "p-8 md:p-12"}`}>
+      <a href={url} target="_blank" rel="noreferrer" className={`flex flex-col gap-8 md:flex-row md:items-center md:gap-14 ${reverse ? "md:flex-row-reverse" : ""}`}>
+        <div className={`project-visual ${tone} relative aspect-[16/10] overflow-hidden rounded-2xl md:flex-1 ${image ? "p-3 md:p-5" : "p-8 md:p-12"}`}>
           {image ? (
             <div className="absolute inset-3 md:inset-5">
               <img className="block h-full w-full rounded-xl object-cover object-center transition duration-300 group-hover:scale-[1.03]" src={image} alt={`${title} project preview`} />
@@ -29,7 +29,7 @@ function Project({ title, description, url, category, image, tone, reverse = fal
           <span className="bg-bg-primary text-text-primary absolute top-5 left-5 px-3 py-1 text-xs font-medium md:top-8 md:left-8">{category}</span>
         </div>
 
-        <div className="relative">
+        <div className="relative md:flex-1">
           <p className="text-accent mb-5 text-sm font-medium">{featured ? "Featured work" : "Project"}</p>
           <h3 className="display-heading text-text-primary group-hover:text-accent text-5xl transition-colors md:text-7xl">{title}</h3>
           <p className="text-text-secondary mt-6 max-w-md text-base leading-relaxed">{description}</p>
