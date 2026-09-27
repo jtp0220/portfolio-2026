@@ -5,7 +5,7 @@ import { FaArrowUpRightFromSquare, FaGithub } from "react-icons/fa6";
 
 function RepoThumbnail({ title, category }: { title: string; category: string }) {
   return (
-    <div className="flex h-full flex-col items-center justify-center gap-4 rounded-xl border border-white/20 bg-black/10">
+    <div className="flex h-full w-full flex-col items-center justify-center gap-4 rounded-xl border border-white/20 bg-black/10">
       <FaGithub className="text-text-primary size-20 opacity-90 md:size-28" aria-hidden="true" />
       <span className="text-text-primary/70 text-sm">{category} / source code</span>
       <span className="sr-only">GitHub repository for {title}</span>
@@ -25,14 +25,17 @@ function Project({ title, description, url, category, image, tone, reverse = fal
           ) : (
             <RepoThumbnail title={title} category={category} />
           )}
+
           <span className="bg-bg-primary text-text-primary absolute top-5 left-5 px-3 py-1 text-xs font-medium md:top-8 md:left-8">{category}</span>
         </div>
+
         <div className="relative">
           <p className="text-accent mb-5 text-sm font-medium">{featured ? "Featured work" : "Project"}</p>
           <h3 className="display-heading text-text-primary group-hover:text-accent text-5xl transition-colors md:text-7xl">{title}</h3>
           <p className="text-text-secondary mt-6 max-w-md text-base leading-relaxed">{description}</p>
           <span className="text-text-primary mt-8 inline-flex items-center gap-4 text-sm font-medium">
-            View project <FaArrowUpRightFromSquare className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+            View project
+            <FaArrowUpRightFromSquare className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
           </span>
         </div>
       </a>
@@ -50,6 +53,7 @@ export default function Projects() {
           </h1>
           <p className="text-text-secondary max-w-xs text-base leading-relaxed">A few experiments, projects, and collaborations.</p>
         </div>
+
         <div className="mt-10">
           {projectsData.map((project) => (
             <Project key={project.title} {...project} />
